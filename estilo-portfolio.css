@@ -1,0 +1,55 @@
+/*Este es el estilo de portfolio de Alberto*/
+
+#wrapper {width: 99%;
+        height: 800px;
+        /*background-color: blanchedalmond;*/
+        margin:1%;
+        }
+header {position: relative;
+    /* relative para que el titulo que va dentro,
+    lo puedas colocar con absolute, donde quiera*/
+    background-image: url("imagenes-portfolio/portfolio.jpg");
+    background-size: cover;
+    /*cover adapta bien la imagen responsive
+    pero la corta...*/
+    background-position: center;
+    /*como mi imagen tiene lo importante en el centro,
+    debo poner background-position: center para que corte 
+    de los lados*/
+    background-repeat: no-repeat;
+    height: 100px;
+    width: 99%;
+}
+#titulo {position: absolute;
+        font-family: 'Anton', sans-serif;
+        top:0;
+        width: 100%;
+        font-size: 2em;
+        text-align: center;
+        /*OJO, RARO: para que el navegador calcule bien
+        el centro donde poner el título, hay que
+        indicarle estas cuatro cosas:*/
+        left:0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+}
+#cuerpo {width: 99%;
+        height: 800px;
+        /*background-color: white;*/
+        text-align: center;
+        }
+
+div.polaroid {
+        width: 35%;
+        background-color: gray;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        margin-bottom: 10%;
+        display: inline-block;
+        padding: 5px;
+        margin: 20px;}      
+div.container {
+            text-align: center;
+            padding: 10px 20px;}
+
+

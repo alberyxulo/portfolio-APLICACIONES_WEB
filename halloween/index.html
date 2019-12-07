@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="apple-touch-icon" sizes="60x60" href="imagenes/apple-icon-60x60.png">
+    <link id="icono" rel="icon" type="image/png" sizes="32x32" href="imagenes/favicon-32x32.png">
+    <title>¡QUE YA ES HALLOWEEN!</title>
+    <link href="https://fonts.googleapis.com/css?family=Nosifer&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Creepster&display=swap" rel="stylesheet">
+    <style>
+        #icono{background-color: white;}
+        body {background-image: linear-gradient(to bottom right,darkblue, orangered);
+              background-repeat: no-repeat;}
+        #wrapper {position: relative; /*El wrapper se mueve para centrarse*/
+                  background-image: url("imagenes/fondo-pagina.jpg");
+                  width: 1248px;
+                  height: 702px;
+                  margin: auto;
+                  border-radius: 20px;
+                  }
+        h1 {position:absolute;/* lo que va dentro se mueve con el*/
+            left:350px;
+            top:20px;
+            font-family: 'Nosifer', cursive;
+            font-size: 300%;
+            color: orangered;
+        }
+        #p1     {position:absolute;
+                top: 300px;
+                left: 890px;
+                font-family: 'Creepster', cursive;
+                color: orangered;
+                background-color: rgba(255,69,0,0.2);
+                width: 200px;
+                height: 40px;
+                padding: 5px;
+                }
+        #calabaza {position:absolute;
+                    top: 325px;
+                    left: 125px;
+                    width: 120px;
+                    height: 110px;
+                    /*border:1px solid white;*/
+                    }
+        #pajaro {position:absolute;
+                    top: 150px;
+                    left: 550px;
+                    width: 115px;
+                    height: 90px;
+                    /*border:1px solid white;*/}
+        #gif1 {position:absolute;
+                visibility: hidden;
+                width: 1248px;
+                height: 700px;}
+        #gif2 {position: absolute;
+                top:400px;
+                left:950px;
+                visibility: hidden;}
+    </style>
+    <script>
+        function mostrar(id){
+            document.getElementById(id).style.visibility="visible"
+        }
+        function ocultar(id){
+            document.getElementById(id).style.visibility="hidden"
+        }
+        function sonar(id){
+            document.getElementById(id).play();
+        }
+        function parar(id){
+            document.getElementById(id).pause();
+        }
+    </script>
+</head>
+<body onkeypress="ocultar('gif1')" 
+        onkeypress="parar('sonido')"
+        onkeydown="ocultar('gif2')"
+        onkeydown="parar('risas')">
+    
+
+    <div id="wrapper">
+            <audio id="sonido">
+                    <source src="sonidos/grito2.0.mp3" type="audio/mpeg">
+                </audio>
+                <audio id='risas'>
+                    <source src="sonidos/risa.mp3" type="audio/mpeg">
+                </audio>
+        <h1>Scary Halloween Party</h1>
+        <img id="gif1" src="imagenes/fivenight.gif" height="900">
+        <audio controls>
+            <source src="sonidos/musica_fondo.mp3" type="audio/mpeg">
+        </audio>
+        <p id="p1">
+            Be carefull with the pumpkin<br>
+            DON`T TOUCH THE BIRD
+        </p>
+        <div id="calabaza" onclick="mostrar('gif1');sonar('sonido')"></div>
+        <div id="pajaro" onclick="mostrar('gif2');sonar('risas')"></div>
+        <img id="gif1" src="imagenes/fivenight.gif" height="900">
+        <img id="gif2" src="imagenes/gif2.gif" height="200">
+
+    </div>
+    
+</body>
+</html>
